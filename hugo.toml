@@ -11,7 +11,7 @@ theme = 'PaperMod'
   [params.profileMode]
     enabled = true
     title = 'Brian'
-    subtitle = 'SUSTech'
+    subtitle = 'SUSTech · brian936826@gmail.com'
     imageUrl = '/images/avatar.jpg'
     imageWidth = 150
     imageHeight = 150
