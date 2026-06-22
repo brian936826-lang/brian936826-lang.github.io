@@ -10,7 +10,7 @@ theme = 'PaperMod'
 
   [params.homeInfoParams]
     Title = 'Wentao Xin'
-    Content = '南方科技大学'
+    Content = 'SUSTech'
 
   [[params.socialIcons]]
     name = 'github'
