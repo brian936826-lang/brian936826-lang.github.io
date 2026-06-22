@@ -1,0 +1,37 @@
+baseURL = 'https://brian936826-lang.github.io/'
+languageCode = 'zh-CN'
+title = 'Wentao Xin'
+theme = 'PaperMod'
+
+[params]
+  author = 'Wentao Xin'
+  description = '个人网站'
+  defaultTheme = 'auto'
+
+  [params.homeInfoParams]
+    Title = 'Wentao Xin'
+    Content = '南方科技大学 · 能源系统 & 金融科技'
+
+  [[params.socialIcons]]
+    name = 'github'
+    url = 'https://github.com/brian936826-lang'
+  [[params.socialIcons]]
+    name = 'email'
+    url = 'mailto:brian936826@gmail.com'
+
+[[menu.main]]
+  name = '首页'
+  url = '/'
+  weight = 1
+[[menu.main]]
+  name = '博客'
+  url = '/posts/'
+  weight = 2
+[[menu.main]]
+  name = '作品'
+  url = '/projects/'
+  weight = 3
+[[menu.main]]
+  name = '关于'
+  url = '/about/'
+  weight = 4
