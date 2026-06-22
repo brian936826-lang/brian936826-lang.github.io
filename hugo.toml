@@ -8,9 +8,13 @@ theme = 'PaperMod'
   description = '个人网站'
   defaultTheme = 'auto'
 
-  [params.homeInfoParams]
-    Title = 'Wentao Xin'
-    Content = 'SUSTech'
+  [params.profileMode]
+    enabled = true
+    title = 'Wentao Xin'
+    subtitle = 'SUSTech'
+    imageUrl = '/images/avatar.jpg'
+    imageWidth = 150
+    imageHeight = 150
 
   [[params.socialIcons]]
     name = 'github'
