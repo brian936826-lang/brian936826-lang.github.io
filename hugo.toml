@@ -1,16 +1,16 @@
 baseURL = 'https://brian936826-lang.github.io/'
 languageCode = 'zh-CN'
-title = 'Wentao Xin'
+title = 'Brian'
 theme = 'PaperMod'
 
 [params]
-  author = 'Wentao Xin'
+  author = 'Brian'
   description = '个人网站'
   defaultTheme = 'auto'
 
   [params.profileMode]
     enabled = true
-    title = 'Wentao Xin'
+    title = 'Brian'
     subtitle = 'SUSTech'
     imageUrl = '/images/avatar.jpg'
     imageWidth = 150
