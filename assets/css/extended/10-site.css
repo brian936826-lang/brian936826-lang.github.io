@@ -53,9 +53,10 @@ body {
 }
 
 .main .profile {
-  min-height: calc(100vh - var(--header-height) - var(--footer-height) - var(--space-2xl));
+  min-height: auto;
   justify-content: flex-start;
-  padding-top: clamp(var(--space-2xl), 12vh, var(--space-3xl));
+  padding-top: var(--space-2xl);
+  padding-bottom: var(--space-xl);
   text-align: left;
 }
 
@@ -163,6 +164,33 @@ a:focus-visible,
   margin: var(--space-2xl) auto var(--space-xl);
   padding-bottom: var(--space-lg);
   border-bottom: var(--rule-hairline) solid var(--color-rule);
+}
+
+.home-posts {
+  width: min(100%, 850px);
+  margin: 0 auto var(--space-2xl);
+}
+
+.home-posts > h2 {
+  margin: 0 0 var(--space-md);
+  color: var(--color-ink);
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.home-posts .post-entry {
+  margin-bottom: var(--space-sm);
+}
+
+.home-posts .entry-header h3 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-style: normal;
+  font-weight: 700;
 }
 
 .page-header h1,
