@@ -1,0 +1,69 @@
+/* Hallmark · macrostructure: Long Document · tone: quiet editorial · anchor hue: deep teal */
+:root {
+  --color-paper: oklch(98% 0.008 92);
+  --color-paper-raised: oklch(100% 0 0);
+  --color-ink: oklch(24% 0.026 225);
+  --color-ink-muted: oklch(48% 0.022 225);
+  --color-rule: oklch(88% 0.014 195);
+  --color-accent: oklch(43% 0.075 200);
+  --color-accent-ink: oklch(99% 0.006 200);
+  --color-focus: oklch(53% 0.13 200);
+  --color-selection: oklch(88% 0.045 195);
+  --font-display: "Noto Serif SC", "Source Han Serif SC", "STSong", serif;
+  --font-body: "Noto Sans SC", "Source Han Sans SC", "Microsoft YaHei", sans-serif;
+  --font-mono: "Cascadia Mono", "SFMono-Regular", Consolas, monospace;
+  --space-3xs: 0.25rem;
+  --space-2xs: 0.5rem;
+  --space-xs: 0.75rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+  --space-2xl: 4.5rem;
+  --space-3xl: 7rem;
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-md: 1.0625rem;
+  --text-lg: 1.375rem;
+  --text-xl: 1.875rem;
+  --text-display: clamp(2.6rem, 8vw, 5.8rem);
+  --rule-hairline: 1px;
+  --radius-card: 0.875rem;
+  --radius-pill: 999px;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in: cubic-bezier(0.7, 0, 0.84, 0);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-short: 180ms;
+  --dur-medium: 280ms;
+}
+
+:root {
+  --theme: var(--color-paper);
+  --entry: var(--color-paper-raised);
+  --primary: var(--color-ink);
+  --secondary: var(--color-ink-muted);
+  --tertiary: var(--color-rule);
+  --content: var(--color-ink);
+  --border: var(--color-rule);
+  --code-bg: var(--color-paper-raised);
+}
+
+:root[data-theme="dark"] {
+  --color-paper: oklch(20% 0.018 225);
+  --color-paper-raised: oklch(25% 0.02 225);
+  --color-ink: oklch(94% 0.012 195);
+  --color-ink-muted: oklch(74% 0.018 195);
+  --color-rule: oklch(37% 0.025 205);
+  --color-accent: oklch(76% 0.09 195);
+  --color-accent-ink: oklch(20% 0.018 225);
+  --color-focus: oklch(80% 0.12 195);
+  --color-selection: oklch(36% 0.055 200);
+  --theme: var(--color-paper);
+  --entry: var(--color-paper-raised);
+  --primary: var(--color-ink);
+  --secondary: var(--color-ink-muted);
+  --tertiary: var(--color-rule);
+  --content: var(--color-ink);
+  --border: var(--color-rule);
+  --code-bg: var(--color-paper-raised);
+}
