@@ -1,4 +1,5 @@
-/* Hallmark · macrostructure: Long Document · tone: quiet editorial · anchor hue: deep teal */
+/* Hallmark · macrostructure: Long Document · tone: quiet editorial · anchor hue: deep teal · nav: personal menu · footer: simple attribution · slop: pass (42–45) */
+/* Hallmark · pre-emit critique: P5 H4 E4 S5 R5 V5 */
 html,
 body {
   overflow-x: clip;
@@ -70,7 +71,7 @@ body {
 .profile img {
   width: clamp(7.5rem, 17vw, 10.5rem);
   height: clamp(7.5rem, 17vw, 10.5rem);
-  border: 0.35rem solid var(--color-paper-raised);
+  border: var(--avatar-border) solid var(--color-paper-raised);
   border-radius: var(--radius-card);
   box-shadow: 0 0 0 var(--rule-hairline) var(--color-rule);
 }
@@ -105,7 +106,6 @@ body {
 
 .social-icons a:hover {
   color: var(--color-accent);
-  transform: translateY(-2px);
 }
 
 .buttons {
@@ -125,16 +125,24 @@ body {
 }
 
 .button:hover {
-  background: var(--color-paper-raised);
-  color: var(--color-accent);
-  transform: translateY(-2px);
+  transform: translateY(var(--lift-button));
+}
+
+.button:active {
+  transform: translateY(0);
+}
+
+button:disabled,
+.button[aria-disabled="true"] {
+  cursor: not-allowed;
+  opacity: 0.55;
 }
 
 .button:focus-visible,
 a:focus-visible,
 #theme-toggle:focus-visible {
-  outline: 3px solid var(--color-focus);
-  outline-offset: 3px;
+  outline: var(--focus-width) solid var(--color-focus);
+  outline-offset: var(--focus-offset);
 }
 
 .page-header {
@@ -167,8 +175,7 @@ a:focus-visible,
 
 .post-entry:hover,
 .post-entry:focus-within {
-  border-color: var(--color-accent);
-  transform: translateY(-3px);
+  transform: translateY(var(--lift-card));
 }
 
 .entry-header h2 {
@@ -212,7 +219,7 @@ a:focus-visible,
 }
 
 .post-content blockquote {
-  border-inline-start: 0.2rem solid var(--color-accent);
+  border-inline-start: var(--rule-accent) solid var(--color-accent);
   color: var(--color-ink-muted);
 }
 
@@ -264,6 +271,6 @@ a:focus-visible,
   *::before,
   *::after {
     scroll-behavior: auto;
-    transition-duration: 150ms;
+    transition-duration: var(--dur-reduced);
   }
 }
