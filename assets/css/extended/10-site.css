@@ -61,7 +61,16 @@ body {
 
 .profile .profile_inner {
   width: min(100%, 850px);
+  display: grid;
+  grid-template-areas:
+    "portrait name"
+    "portrait subtitle"
+    "portrait socials"
+    "portrait actions";
+  grid-template-columns: var(--profile-aside) minmax(0, 1fr);
   align-items: flex-start;
+  column-gap: var(--space-xl);
+  row-gap: var(--space-xs);
   gap: var(--space-md);
   padding: var(--space-xl) 0;
   border-top: var(--rule-hairline) solid var(--color-rule);
@@ -69,14 +78,16 @@ body {
 }
 
 .profile img {
-  width: clamp(7.5rem, 17vw, 10.5rem);
-  height: clamp(7.5rem, 17vw, 10.5rem);
+  grid-area: portrait;
+  width: var(--profile-aside);
+  height: var(--profile-aside);
   border: var(--avatar-border) solid var(--color-paper-raised);
   border-radius: var(--radius-card);
   box-shadow: 0 0 0 var(--rule-hairline) var(--color-rule);
 }
 
 .profile h1 {
+  grid-area: name;
   max-width: 100%;
   margin: var(--space-sm) 0 0;
   color: var(--color-ink);
@@ -90,12 +101,14 @@ body {
 }
 
 .profile span {
+  grid-area: subtitle;
   color: var(--color-ink-muted);
   font-size: var(--text-md);
   letter-spacing: 0.05em;
 }
 
 .social-icons {
+  grid-area: socials;
   margin: var(--space-xs) 0 0;
 }
 
@@ -109,6 +122,7 @@ body {
 }
 
 .buttons {
+  grid-area: actions;
   justify-content: flex-start;
   max-width: none;
   margin-top: var(--space-sm);
@@ -254,6 +268,7 @@ a:focus-visible,
   }
 
   .profile .profile_inner {
+    display: flex;
     padding: var(--space-lg) 0;
   }
 
