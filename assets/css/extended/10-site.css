@@ -143,6 +143,10 @@ body {
   transform: translateY(var(--lift-button));
 }
 
+.profile .button-inner {
+  color: var(--color-accent-ink);
+}
+
 .button:active {
   transform: translateY(0);
 }

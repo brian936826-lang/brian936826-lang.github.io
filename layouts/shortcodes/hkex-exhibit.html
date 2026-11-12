@@ -8,6 +8,133 @@
 {{- $q3 := "https://www.hkexgroup.com/-/media/HKEX-Group-Site/ccd/Media-Centre/hkexnews/2026/261106news/261106news_e.pdf" -}}
 {{- $fy := "https://www.hkexgroup.com/-/media/HKEX-Group-Site/ssd/Investor-Relations/annouce/documents/2026/260226_accounts_e.pdf" -}}
 
+{{ if eq .Page.Language.Lang "en" }}
+{{ if eq $kind "routes" }}
+<figure class="hkex-exhibit hkex-routes hkex-en" id="{{ $id }}" lang="en" data-hkex-routes>
+  <figcaption><strong>Three cross-border investment routes</strong><span>Access routes · Turnover measures gross trading activity</span></figcaption>
+  <div class="hkex-tabs" data-hkex-tabs hidden aria-label="Choose an investment route">
+    <button type="button" id="{{ $id }}-tab-north" aria-controls="{{ $id }}-north" data-hkex-tab>Northbound</button>
+    <button type="button" id="{{ $id }}-tab-south" aria-controls="{{ $id }}-south" data-hkex-tab>Southbound</button>
+    <button type="button" id="{{ $id }}-tab-ipo" aria-controls="{{ $id }}-ipo" data-hkex-tab>Hong Kong IPO</button>
+  </div>
+  <section class="hkex-route" id="{{ $id }}-north" data-hkex-panel>
+    <h4>Northbound: international investors access eligible Mainland securities</h4>
+    <ol class="hkex-path">
+      <li><span>Investors</span><strong>International investors</strong></li>
+      <li><span>Access channel</span><strong>Hong Kong intermediaries<br>Stock Connect</strong></li>
+      <li><span>Destination</span><strong>Shanghai and Shenzhen<br>Eligible A shares and other securities</strong></li>
+    </ol>
+    <p class="hkex-route-metric"><strong>332.4</strong> RMB billion/day <span>Northbound average daily turnover · 9M 2026</span></p>
+    <p>Orders reach Mainland exchanges through Hong Kong intermediaries and Stock Connect. HKEX earns fees from its cross-border connectivity, clearing and settlement services.</p>
+  </section>
+  <section class="hkex-route" id="{{ $id }}-south" data-hkex-panel>
+    <h4>Southbound: Mainland investors access eligible Hong Kong securities</h4>
+    <ol class="hkex-path">
+      <li><span>Investors</span><strong>Eligible Mainland investors</strong></li>
+      <li><span>Access channel</span><strong>Mainland intermediaries<br>Stock Connect</strong></li>
+      <li><span>Destination</span><strong>Hong Kong<br>Eligible listed securities</strong></li>
+    </ol>
+    <p class="hkex-route-metric"><strong>117.4</strong> HK$ billion/day <span>Southbound average daily turnover · 9M 2026</span></p>
+    <p>Orders execute in Hong Kong, where HKEX provides trading, clearing and settlement services and earns the associated fees.</p>
+  </section>
+  <section class="hkex-route" id="{{ $id }}-ipo" data-hkex-panel>
+    <h4>Hong Kong IPOs: companies raise capital</h4>
+    <ol class="hkex-path">
+      <li><span>Issuer</span><strong>Mainland company</strong></li>
+      <li><span>Offering and listing</span><strong>Hong Kong issuance,<br>subscription and listing</strong></li>
+      <li><span>Proceeds</span><strong>Capital goes to the company</strong></li>
+    </ol>
+    <p>HKEX earns listing and related service fees. Subsequent trading generates trading and clearing revenue.</p>
+  </section>
+  <details><summary>Method &amp; sources</summary>
+    <p class="hkex-method">QFI is an alternative access route. Turnover is gross trading activity, not net capital inflow. Broker commissions, taxes, cross-border transfers and IPO proceeds are distinct from HKEX revenue.</p>
+    <p class="hkex-source">Data: <a href="{{ $q3 }}#page=9">HKEX 2026 Q3 results, p. 9</a>.</p>
+  </details>
+</figure>
+
+{{ else if eq $kind "revenue" }}
+<figure class="hkex-exhibit hkex-en" id="{{ $id }}" lang="en">
+  <figcaption><strong>Trading and clearing drive revenue</strong><span>9M 2026 · Group revenue and other income · HK$ billion</span></figcaption>
+  <div class="hkex-revenue-bar" role="img" aria-label="Trading and trading system usage fees: HK$8.840 billion. Clearing and settlement fees: HK$6.506 billion. Other revenue and income: HK$9.223 billion. Trading and clearing together represent 62.5%.">
+    <span class="hkex-revenue-trading" style="width:35.9803%"></span><span class="hkex-revenue-clearing" style="width:26.4805%"></span><span class="hkex-revenue-other" style="width:37.5392%"></span>
+  </div>
+  <div class="hkex-share-bracket"><span><strong>62.5%</strong> trading &amp; clearing</span></div>
+  <dl class="hkex-revenue-values">
+    <div><dt><i class="hkex-swatch hkex-revenue-trading" aria-hidden="true"></i>Trading and system usage fees</dt><dd>8.840</dd></div>
+    <div><dt><i class="hkex-swatch hkex-revenue-clearing" aria-hidden="true"></i>Clearing and settlement fees</dt><dd>6.506</dd></div>
+    <div><dt><i class="hkex-swatch hkex-revenue-other" aria-hidden="true"></i>Other revenue and income</dt><dd>9.223</dd></div>
+  </dl>
+  <details><summary>Method &amp; sources</summary>
+    <p class="hkex-method">Other revenue and income include listing, custody, market data and investment income.</p>
+    <p class="hkex-source">Source: <a href="{{ $q3 }}#page=23">HKEX 2026 Q3 results, p. 23</a>. Total: HK$24.569 billion.</p>
+  </details>
+</figure>
+
+{{ else if eq $kind "leverage" }}
+<figure class="hkex-exhibit hkex-en" id="{{ $id }}" lang="en">
+  <figcaption><strong>Revenue growth versus cost growth drives profit</strong><span>Year-on-year changes · Both periods use the same scale</span></figcaption>
+  <div class="hkex-leverage-group">
+    <h4>Full year 2025 <span>Revenue outpaced costs</span></h4>
+    <div class="hkex-growth-row"><span>Revenue &amp; other income</span><div class="hkex-growth-track" aria-hidden="true"><i style="width:66.66%"></i></div><strong>+30.3%</strong></div>
+    <div class="hkex-growth-row"><span>Operating expenses</span><div class="hkex-growth-track" aria-hidden="true"><i class="hkex-cost" style="width:11.66%"></i></div><strong>+5.3%</strong></div>
+    <div class="hkex-growth-row"><span>Attributable profit</span><div class="hkex-growth-track" aria-hidden="true"><i style="width:79.2%"></i></div><strong>+36.0%</strong></div>
+  </div>
+  <div class="hkex-leverage-group">
+    <h4>Q3 2026 <span>Revenue slowed while costs rose</span></h4>
+    <div class="hkex-growth-row"><span>Revenue &amp; other income</span><div class="hkex-growth-track" aria-hidden="true"><i style="width:2.2%"></i></div><strong>+1%</strong></div>
+    <div class="hkex-growth-row"><span>Operating expenses</span><div class="hkex-growth-track" aria-hidden="true"><i class="hkex-cost" style="width:17.6%"></i></div><strong>+8%</strong></div>
+    <div class="hkex-growth-row"><span>Attributable profit</span><div class="hkex-growth-track" aria-hidden="true"><i class="hkex-negative" style="width:2.2%"></i></div><strong>−1%</strong></div>
+  </div>
+  <details><summary>Method &amp; sources</summary>
+    <p class="hkex-source">Sources: <a href="{{ $fy }}#page=2">HKEX 2025 results, p. 2</a>; <a href="{{ $q3 }}#page=3">2026 Q3 results, p. 3</a>.</p>
+  </details>
+</figure>
+
+{{ else if eq $kind "valuation" }}
+<figure class="hkex-exhibit hkex-en" id="{{ $id }}" lang="en">
+  <figcaption><strong>Historical valuation and price scenarios</strong><span>2005–2026 · 22 annual post-results observations</span></figcaption>
+  <div class="hkex-pe-chart" role="img" aria-label="Annual historical sample: first quartile 29.66 times, median 33.43 times, third quartile 38.82 times. Research-date P/E is 24.52 times on a rolling TTM basis; the historical sample uses annual earnings.">
+    <div class="hkex-pe-band-labels"><span>Q1<strong>29.66×</strong></span><span>Median<strong>33.43×</strong></span><span>Q3<strong>38.82×</strong></span></div>
+    <div class="hkex-pe-track"><div class="hkex-pe-iqr"><i></i></div></div>
+    <div class="hkex-pe-current"><i></i><span>11 Nov 2026 <strong>24.52×</strong><small>Rolling TTM earnings</small></span></div>
+    <div class="hkex-pe-axis" aria-hidden="true"><span>20×</span><span>25×</span><span>30×</span><span>35×</span><span>40×</span><span>45×</span></div>
+  </div>
+  <div class="hkex-table-wrap">
+    <table class="hkex-scenarios">
+      <caption>Price scenarios · TTM EPS held at HK$15.63</caption>
+      <thead><tr><th scope="col">P/E</th><th scope="col">Price<br><span>HK$</span></th><th scope="col">Change<br><span>vs. HK$383.20</span></th></tr></thead>
+      <tbody><tr><th scope="row">20×</th><td>312.60</td><td>−18.4%</td></tr><tr><th scope="row">25×</th><td>390.75</td><td>+2.0%</td></tr><tr class="hkex-base"><th scope="row">30×</th><td>468.90</td><td>+22.4%</td></tr><tr><th scope="row">33.43×</th><td>522.51</td><td>+36.4%</td></tr></tbody>
+    </table>
+  </div>
+  <details><summary>Method &amp; sources</summary>
+    <p class="hkex-method">Historical P/E uses the preceding year's disclosed basic EPS; current P/E uses rolling TTM EPS. The band shows the sample's interquartile range (Q1–Q3).</p>
+    <p class="hkex-source">Source: author's report. TTM EPS ≈ 14.05 + 12.20 − 10.62, from <a href="{{ $fy }}#page=2">2025 results</a> and <a href="{{ $q3 }}#page=5">2026 Q3 results</a>.</p>
+  </details>
+</figure>
+
+{{ else if eq $kind "fee" }}
+<figure class="hkex-exhibit hkex-fee hkex-en" id="{{ $id }}" lang="en" data-hkex-fee data-lang="en" data-baseline="914" data-decimals="1">
+  <figcaption><strong>Northbound turnover and trading fees</strong><span>Trading-fee sensitivity · 9M 2026 baseline</span></figcaption>
+  <label class="hkex-slider-label" for="{{ $id }}-range">Change in Northbound daily turnover <output data-hkex-change for="{{ $id }}-range">0%</output></label>
+  <input class="hkex-slider" id="{{ $id }}-range" type="range" min="-30" max="30" step="1" value="0" aria-describedby="{{ $id }}-assumption" data-hkex-range disabled>
+  <div class="hkex-range-ticks" aria-hidden="true"><span>−30%</span><span>Baseline</span><span>+30%</span></div>
+  <div class="hkex-fee-results" role="status" aria-live="polite" aria-atomic="true">
+    <div><span>Northbound trading fees</span><strong><output data-hkex-total>914.0</output><small>HK$ million</small></strong></div>
+    <div><span>Change from baseline</span><strong class="hkex-fee-delta"><output data-hkex-delta>0.0</output><small>HK$ million</small></strong></div>
+  </div>
+  <div class="hkex-fee-track" aria-hidden="true"><i data-hkex-fee-bar></i><span></span></div>
+  <details><summary>Method &amp; sources</summary>
+    <p class="hkex-formula">Trading fees = HK$914 million × (1 + turnover change)</p>
+    <p class="hkex-method" id="{{ $id }}-assumption">Baseline daily turnover: RMB332.4 billion. Fee rates, revenue sharing, trading mix, exchange rates and trading days are held constant. Covers Northbound trading fees only.</p>
+    <p class="hkex-source">Baseline: <a href="{{ $q3 }}#page=8">HKEX 2026 Q3 results, pp. 8–9</a>.</p>
+  </details>
+  <noscript><p class="hkex-method">Enable JavaScript to use the slider.</p></noscript>
+</figure>
+{{ else }}
+  {{ errorf "Unknown hkex-exhibit kind: %s" $kind }}
+{{ end }}
+
+{{ else }}
 {{ if eq $kind "routes" }}
 <figure class="hkex-exhibit hkex-routes" id="{{ $id }}" data-hkex-routes>
   <figcaption><strong>三条跨境投资路径</strong><span>通道示意 · 成交额非净流入</span></figcaption>
@@ -131,4 +258,6 @@
 </figure>
 {{ else }}
   {{ errorf "Unknown hkex-exhibit kind: %s" $kind }}
+{{ end }}
+
 {{ end }}

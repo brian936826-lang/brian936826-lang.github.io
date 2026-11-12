@@ -4,7 +4,7 @@
 {{- $posts := where site.RegularPages "Type" "posts" }}
 {{- with $posts }}
 <section class="home-posts" aria-labelledby="latest-posts-title">
-  <h2 id="latest-posts-title">最新文章</h2>
+  <h2 id="latest-posts-title">{{ if eq site.Language.Lang "en" }}Latest articles{{ else }}最新文章{{ end }}</h2>
   {{- range .ByDate.Reverse }}
   <article class="post-entry">
     <header class="entry-header">
@@ -18,7 +18,7 @@
     {{- if not (.Param "hideMeta") }}
     <footer class="entry-footer">{{ partial "post_meta.html" . }}</footer>
     {{- end }}
-    <a class="entry-link" aria-label="阅读：{{ .Title | plainify }}" href="{{ .RelPermalink }}"></a>
+    <a class="entry-link" aria-label="{{ if eq site.Language.Lang "en" }}Read: {{ else }}阅读：{{ end }}{{ .Title | plainify }}" href="{{ .RelPermalink }}"></a>
   </article>
   {{- end }}
 </section>
