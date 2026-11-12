@@ -50,7 +50,11 @@ body:has(.hkex-exhibit) .post-single { max-width: 800px; margin-inline: auto; }
 .hkex-growth-row > strong { text-align: right; font-variant-numeric: tabular-nums; }
 .hkex-growth-track { position: relative; height: 1.4rem; }.hkex-growth-track::before { content: ""; position: absolute; left: 8%; height: 100%; border-left: 1px solid var(--color-ink-muted); }
 .hkex-growth-track i { position: absolute; left: 8%; top: .2rem; height: 1rem; background: var(--color-accent); }.hkex-growth-track .hkex-cost { background: var(--hkex-secondary); }.hkex-growth-track .hkex-negative { left: 5.8%; background: var(--color-ink-muted); }
-.hkex-pe-chart { padding: var(--space-sm) 0; }.hkex-pe-band-labels { display: flex; justify-content: flex-end; gap: 2rem; color: var(--color-ink-muted); font-size: var(--text-xs); }
+.hkex-pe-chart { padding: var(--space-sm) 0; }.hkex-pe-band-labels { position: relative; height: 3rem; color: var(--color-ink-muted); font-size: var(--text-xs); }
+.hkex-pe-band-labels > span { position: absolute; transform: translateX(-50%); white-space: nowrap; text-align: center; }
+.hkex-pe-band-labels > span:nth-child(1) { left: 38.6577%; }
+.hkex-pe-band-labels > span:nth-child(2) { left: 53.7366%; }
+.hkex-pe-band-labels > span:nth-child(3) { left: 75.2626%; }
 .hkex-pe-band-labels strong { display: block; color: var(--color-ink); font-size: 1rem; }
 .hkex-pe-track { position: relative; height: 2rem; margin-top: var(--space-xs); border-bottom: 1px solid var(--color-rule); }
 .hkex-pe-iqr { position: absolute; left: 38.6577%; width: 36.6049%; height: 1.3rem; background: var(--hkex-secondary); }
@@ -72,7 +76,7 @@ body:has(.hkex-exhibit) .post-single { max-width: 800px; margin-inline: auto; }
 @media (max-width: 520px) {
   .post-content .hkex-path { grid-template-columns: 1fr; gap: 1.2rem; }.hkex-path li { padding: .4rem 0; }.hkex-path li:not(:last-child)::after { content: "↓"; right: .5rem; top: auto; bottom: -1.45rem; }.hkex-path li > strong br { display: none; }
   .hkex-growth-row { grid-template-columns: 6.6rem minmax(0, 1fr) 4rem; gap: .25rem; font-size: var(--text-xs); }.hkex-leverage-group h4 > span { display: block; margin-left: 0; }
-  .hkex-pe-band-labels { justify-content: space-between; gap: .5rem; }.post-content .hkex-scenarios th, .post-content .hkex-scenarios td { padding: .6rem .3rem; }
+  .hkex-pe-band-labels strong { font-size: .875rem; }.post-content .hkex-scenarios th, .post-content .hkex-scenarios td { padding: .6rem .3rem; }
   .hkex-share-bracket { width: 62.4608%; }.hkex-share-bracket > span { font-size: var(--text-xs); }.hkex-share-bracket strong { font-size: 1.2rem; }
 }
 @media print { .hkex-exhibit .hkex-tabs { display: none !important; }.hkex-exhibit .hkex-route[hidden] { display: block !important; }.hkex-exhibit { break-inside: avoid; }.hkex-slider { display: none; } }
