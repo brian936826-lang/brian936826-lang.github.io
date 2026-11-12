@@ -19,6 +19,9 @@ body:has(.hkex-exhibit) .post-single { max-width: 800px; margin-inline: auto; }
 .post-content .hkex-exhibit h4 { margin: 0 0 var(--space-sm); font-family: var(--font-body); font-size: 1rem; line-height: 1.6; }
 .post-content .hkex-exhibit .hkex-method, .post-content .hkex-exhibit .hkex-source { color: var(--color-ink-muted); font-size: var(--text-xs); line-height: 1.8; }
 .hkex-exhibit [hidden] { display: none !important; }
+.hkex-exhibit details { margin-top: .75rem; }
+.hkex-exhibit summary { min-height: 44px; padding: .5rem 0; cursor: pointer; color: var(--color-accent); }
+.hkex-exhibit summary:focus-visible { outline: var(--focus-width) solid var(--color-focus); outline-offset: var(--focus-offset); }
 .hkex-exhibit button:focus-visible, .hkex-exhibit input:focus-visible, .hkex-exhibit [tabindex]:focus-visible { outline: var(--focus-width) solid var(--color-focus); outline-offset: var(--focus-offset); }
 .hkex-tabs { display: flex; gap: var(--space-xs); border-bottom: 1px solid var(--color-rule); margin-bottom: var(--space-md); }
 .hkex-tabs button { flex: 1; min-height: 44px; padding: .5rem .35rem; border: 0; border-bottom: 3px solid transparent; background: transparent; color: var(--color-ink-muted); font: inherit; cursor: pointer; }
