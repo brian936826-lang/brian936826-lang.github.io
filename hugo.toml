@@ -66,7 +66,7 @@ theme = 'PaperMod'
   hasCJKLanguage = false
   weight = 2
   [languages.en.params]
-    author = 'Wentao Xin (Brian)'
+    author = 'Brian'
     description = 'Research, ideas and writing by Brian.'
     [languages.en.params.profileMode]
       subtitle = 'Research, ideas & writing'
@@ -74,8 +74,8 @@ theme = 'PaperMod'
         name = 'Articles'
         url = '/en/posts/'
       [[languages.en.params.profileMode.buttons]]
-        name = '中文主页'
-        url = '/'
+        name = 'Projects'
+        url = '/en/projects/'
   [[languages.en.menu.main]]
     name = 'Home'
     url = '/en/'
@@ -84,3 +84,11 @@ theme = 'PaperMod'
     name = 'Articles'
     url = '/en/posts/'
     weight = 2
+  [[languages.en.menu.main]]
+    name = 'Projects'
+    url = '/en/projects/'
+    weight = 3
+  [[languages.en.menu.main]]
+    name = 'About'
+    url = '/en/about/'
+    weight = 4

@@ -1,7 +1,7 @@
 ---
 title: "市场的市场：我为什么看好港交所"
 date: 2026-11-12T18:00:00+08:00
-author: "辛文韬 Brian"
+author: "Brian"
 description: "从跨境投资路径到交易、清算和股东回报，展开我对港交所的中长期买入判断。"
 summary: "投资者选择证券，券商服务客户，港交所承接交易与清算。我看好这套市场基础设施，关注它怎样把中国资产的参与需求转化为收入、利润和股东回报。"
 tags: ["投资研究", "港交所", "中国资本市场"]
@@ -9,7 +9,7 @@ ShowToc: false
 draft: false
 ---
 
-*辛文韬 Brian｜HKEX · 0388.HK｜研究时点：2026年11月11日｜[完整研究报告（Word）](https://brian936826-lang.github.io/posts/hkex-market-of-markets/HKEX-The-Market-of-Markets.docx)*
+*Brian｜HKEX · 0388.HK｜研究时点：2026年11月11日｜[完整研究报告（Word）](https://brian936826-lang.github.io/posts/hkex-market-of-markets/HKEX-The-Market-of-Markets.docx)*
 
 2026年5月22日，证监会对老虎、富途、长桥相关主体的非法跨境展业作出行政处罚事先告知。同日公布的整治安排，把治理范围延伸到存量业务、交易指令和资金划转，同时明确引导境内投资者通过港股通、QDII等合法渠道投资境外市场。[^brokers]
 
