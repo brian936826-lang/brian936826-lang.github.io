@@ -39,16 +39,21 @@
   document.querySelectorAll("[data-hkex-fee]").forEach((figure) => {
     const slider = figure.querySelector("[data-hkex-range]");
     if (!slider) return;
+    const english = figure.dataset.lang === "en";
+    const baseline = Number(figure.dataset.baseline || 9.14);
+    const decimals = Number(figure.dataset.decimals || 2);
     const signed = (value, digits) => `${value > 0 ? "+" : value < 0 ? "−" : ""}${Math.abs(value).toFixed(digits)}`;
     function update() {
       const change = Math.max(-30, Math.min(30, Number(slider.value) || 0));
-      const delta = 9.14 * change / 100;
-      const total = 9.14 + delta;
+      const delta = baseline * change / 100;
+      const total = baseline + delta;
       figure.querySelector("[data-hkex-change]").textContent = `${signed(change, 0)}%`;
-      figure.querySelector("[data-hkex-total]").textContent = total.toFixed(2);
-      figure.querySelector("[data-hkex-delta]").textContent = signed(delta, 2);
-      figure.querySelector("[data-hkex-fee-bar]").style.width = `${total / (9.14 * 1.3) * 100}%`;
-      slider.setAttribute("aria-valuetext", `成交额变化${signed(change, 0)}%，北向交易费${total.toFixed(2)}亿港元`);
+      figure.querySelector("[data-hkex-total]").textContent = total.toFixed(decimals);
+      figure.querySelector("[data-hkex-delta]").textContent = signed(delta, decimals);
+      figure.querySelector("[data-hkex-fee-bar]").style.width = `${total / (baseline * 1.3) * 100}%`;
+      slider.setAttribute("aria-valuetext", english
+        ? `Turnover change ${signed(change, 0)}%; Northbound trading fees HK$${total.toFixed(decimals)} million`
+        : `成交额变化${signed(change, 0)}%，北向交易费${total.toFixed(decimals)}亿港元`);
     }
     slider.disabled = false;
     slider.addEventListener("input", update);
